@@ -6,12 +6,14 @@ import NewTask from "./NewTask"
 
 const Stack = createNativeStackNavigator()
 
+
+
 export default function Index(){
     return (
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={Home} options={{headerShown : false}} />
-                <Stack.Screen name="NewTask" component={NewTask} />
+                <Stack.Screen name="NewTask" component={NewTask}  options={{headerShown : false}} />
             </Stack.Navigator>
         </NavigationContainer>
     )

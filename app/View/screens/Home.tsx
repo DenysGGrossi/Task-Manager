@@ -3,8 +3,8 @@ import { FontAwesome6 } from '@expo/vector-icons';
 import TaskCard from "../components/TaskCard";
 
 
-export default function Home () {
-    
+export default function Home ({navigation}) {
+    console.log("aaaaa");
     return (
         <SafeAreaView>
             <View style={headerStyles.header}>
@@ -12,7 +12,7 @@ export default function Home () {
                     Tasks
                 </Text>
                 <View style={headerStyles.buttonContainer}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('NewTask')}>
                         <FontAwesome6 name="add" size={24} color="black" />
                     </TouchableOpacity>
                 </View>
@@ -23,6 +23,7 @@ export default function Home () {
 
             <ScrollView style={headerStyles.scrollContainer}>
                 <TaskCard  />
+                
             </ScrollView>
         </SafeAreaView>
     )
