@@ -10,8 +10,8 @@
 </h2>
 
 <p>
-    - clone the repository
-    - use npm or yarn to download the project dependencies
-    - use "npm start" to show the QR Code for Expo Go app
-    - or you can use "npm run android" or "npm run ios" to run the project on a emulator or connected device
+    - clone the repository</p>
+   <p> - use npm or yarn to download the project dependencies</p>
+   <p> - use "npm start" to show the QR Code for Expo Go app</p>
+   <p> - or you can use "npm run android" or "npm run ios" to run the project on a emulator or connected device
 </p>
