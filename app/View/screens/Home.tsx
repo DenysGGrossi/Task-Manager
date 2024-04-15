@@ -1,5 +1,6 @@
-import { View, StyleSheet, SafeAreaView, Text, TouchableOpacity } from "react-native"
+import { View, StyleSheet, SafeAreaView, Text, TouchableOpacity, ScrollView } from "react-native"
 import { FontAwesome6 } from '@expo/vector-icons';  
+import TaskCard from "../components/TaskCard";
 
 
 export default function Home () {
@@ -11,12 +12,18 @@ export default function Home () {
                     Tasks
                 </Text>
                 <View style={headerStyles.buttonContainer}>
-                    <TouchableOpacity style={headerStyles.topBarButton}>
+                    <TouchableOpacity>
                         <FontAwesome6 name="add" size={24} color="black" />
                     </TouchableOpacity>
                 </View>
+
+                
             </View>
             
+
+            <ScrollView style={headerStyles.scrollContainer}>
+                <TaskCard  />
+            </ScrollView>
         </SafeAreaView>
     )
 }
@@ -41,7 +48,9 @@ const headerStyles = StyleSheet.create({
         flexDirection: 'row',
 
     },
-    topBarButton: {
-        marginHorizontal: 16
+    scrollContainer: {
+        height: '100%',
+        width: '100%',
     }
+    
 })
